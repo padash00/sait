@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Регистрация для турниров и соревнований.">
+    <meta name="keywords" content="регистрация, турнир, капитан, соло игрок, команда">
+    <meta name="author" content="Турнирная платформа">
+    <title>Регистрация | Турнирная платформа</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-nav">
+            <img src="images/logo.png" alt="Логотип Турнира">
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="registration.html" class="active">Регистрация</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="registration-form">
+            <h1>Регистрация</h1>
+            <p>Выберите, кем вы хотите зарегистрироваться:</p>
+            <div class="role-selection">
+                <button id="captain-btn">Капитан команды</button>
+                <button id="solo-btn">Соло игрок</button>
+            </div>
+
+            <!-- Форма для капитана команды -->
+            <form id="captain-form" class="hidden captain-form">
+                <h2>Регистрация команды</h2>
+                <label for="team-name">Название команды:</label>
+                <input type="text" id="team-name" name="team-name" required>
+
+                <h3>Информация о капитане</h3>
+                <label for="captain-name">Имя капитана:</label>
+                <input type="text" id="captain-name" name="captain-name" required>
+                <label for="faceit-link-captain">Faceit профиль капитана:</label>
+                <input type="url" id="faceit-link-captain" name="faceit-link-captain" placeholder="https://faceit.com/..." required>
+
+                <h3>Участники команды</h3>
+                <div id="team-members">
+                    <label for="member1-name">Имя участника 1:</label>
+                    <input type="text" id="member1-name" name="member1-name" required>
+                    <label for="member1-faceit">Faceit профиль участника 1:</label>
+                    <input type="url" id="member1-faceit" name="member1-faceit" placeholder="https://faceit.com/..." required>
+
+                    <label for="member2-name">Имя участника 2:</label>
+                    <input type="text" id="member2-name" name="member2-name" required>
+                    <label for="member2-faceit">Faceit профиль участника 2:</label>
+                    <input type="url" id="member2-faceit" name="member2-faceit" placeholder="https://faceit.com/..." required>
+
+                    <label for="member3-name">Имя участника 3:</label>
+                    <input type="text" id="member3-name" name="member3-name" required>
+                    <label for="member3-faceit">Faceit профиль участника 3:</label>
+                    <input type="url" id="member3-faceit" name="member3-faceit" placeholder="https://faceit.com/..." required>
+
+                    <label for="member4-name">Имя участника 4:</label>
+                    <input type="text" id="member4-name" name="member4-name" required>
+                    <label for="member4-faceit">Faceit профиль участника 4:</label>
+                    <input type="url" id="member4-faceit" name="member4-faceit" placeholder="https://faceit.com/..." required>
+                </div>
+                <button type="submit">Зарегистрировать команду</button>
+            </form>
+
+            <!-- Форма для соло игрока -->
+            <form id="solo-form" class="hidden solo-form">
+                <h2>Регистрация соло игрока</h2>
+                <label for="solo-name">Ваше имя:</label>
+                <input type="text" id="solo-name" name="solo-name" required>
+                <label for="faceit-link-solo">Ссылка на ваш Faceit профиль:</label>
+                <input type="url" id="faceit-link-solo" name="faceit-link-solo" placeholder="https://faceit.com/..." required>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Турнирная платформа. Все права защищены.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
